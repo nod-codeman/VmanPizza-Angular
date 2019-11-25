@@ -3,16 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomerComponent } from './customer/customer.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import {PizzaService} from './data.servpizza';
+
+import {Pizza} from './pizza';
+
+
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomerComponent
+  
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [PizzaService, Pizza],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
