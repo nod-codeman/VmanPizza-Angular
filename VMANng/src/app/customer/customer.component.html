@@ -1,5 +1,10 @@
-<h1>customer works</h1>
-  <p>{{OrderId}}</p>
-  <h2>{{PizzaType}}</h2>
-  <p>{{Qty}}</p>
-  <div><img src="{{pizzaImageUrl}}"></div>
+
+<h1>{{pizza.orderId}}</h1>
+<h1>{{pizza.pizzaType}} PIZZA</h1>
+<h1>{{pizza.qtyS}} SMALL</h1>
+<h1>{{pizza.qtyM}} MEDIUM</h1>
+<h1>{{pizza.qtyL}} LARGE</h1>
+
+<button (click)="Pizzasgetter()">GET PIZZAS!</button><span style="margin-left: 1cm">   </span><button (click)="Pizzasgetter()">DELIVERED</button>
+
+

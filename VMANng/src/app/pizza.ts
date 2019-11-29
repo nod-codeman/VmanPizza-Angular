@@ -5,5 +5,5 @@ export class Pizza{
    public QtyM: string;
    public QtyL: string;
    public OrderId : string;
-   data: Pizza[];
+   public data: [];
 }
