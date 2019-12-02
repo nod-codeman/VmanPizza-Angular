@@ -18,13 +18,7 @@ export class CustomerComponent implements OnInit{
  
   pizza :  Pizza [] = []
 
-
-  
-  
-
-  pizzaImageUrl = 'dist/assets/garden-veggie-pizza.ico';
-
- 
+  pizzaImageUrl = "assets/bocce_deluxe.jpg"
 
   constructor(private PizzaService: PizzaService){
 

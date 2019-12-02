@@ -6,6 +6,7 @@ import { LoginComponent } from './customer/login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { OrderComponent } from './order/order.component';
+import { RegisterComponent} from './customer/register/register.component'
 
 
 describe('AppComponent', () => {
@@ -20,7 +21,8 @@ describe('AppComponent', () => {
         AppComponent,
         CustomerComponent,
         LoginComponent,
-        OrderComponent
+        OrderComponent,
+        RegisterComponent
         
       ],
     }).compileComponents();

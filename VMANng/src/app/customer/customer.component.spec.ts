@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CustomerComponent } from './customer.component';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import {PizzaService} from '../data.servpizza';
 
 
@@ -11,7 +11,7 @@ import {PizzaService} from '../data.servpizza';
 describe('CustomerComponent', () => {
   let component: CustomerComponent;
   let fixture: ComponentFixture<CustomerComponent>;
-  let testclient: PizzaService;
+ 
   
  
 

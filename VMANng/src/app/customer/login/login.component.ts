@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import { PizzaService } from '../../data.servpizza'
+import { User } from '../../user'
 
 @Component({
   selector: 'app-login',
@@ -6,14 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-   
-  public  Id : number 
-  public  FirstName : string
-  public  Email : string
+  email : NgModel
+  user : any
 
-  constructor() { }
+  constructor(private PizzaService: PizzaService) { }
 
   ngOnInit() {
   }
+
+  Login(email){
+    this.PizzaService.getCustomer(email).subscribe(data => this.user = data)
+  }
+  
 
 }

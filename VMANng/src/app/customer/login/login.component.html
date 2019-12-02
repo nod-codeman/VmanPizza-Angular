@@ -1,24 +1,21 @@
-<h1>Login</h1>
+<h1>Enter your registered email.</h1>
 
+<object *ngIf="user==404" >Invalid Login. Please try again or Register.</object>
 
-<hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Login">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+       <div class="col-md-4">
+     
+            
+                
+                <input [(ngModel)]="email" class="form-control" />
+                <span  class="text-danger"></span>
+           
+          
+                <button (click)="Login([email])">LOGIN</button>
+    </div>    
 </div>
+<a *ngIf="user!=404" routerLink="'order'">Proceed to Order</a>
+
+
+
+

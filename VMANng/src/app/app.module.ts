@@ -8,11 +8,18 @@ import { CustomerComponent } from './customer/customer.component';
 import {HttpClientModule} from '@angular/common/http';
 import {PizzaService} from './data.servpizza';
 
-import {Pizza} from './pizza';
-import {LoginComponent } from './customer/login/login.component';
+
+
 
 import {FormsModule} from '@angular/forms';
+import {Pizza} from './pizza';
 import { OrderComponent } from './order/order.component';
+
+import {LoginComponent } from './customer/login/login.component';
+import {User} from './user';
+
+
+import { RegisterComponent } from './customer/register/register.component';
 
 
 
@@ -24,7 +31,8 @@ import { OrderComponent } from './order/order.component';
     AppComponent,
     CustomerComponent,
     LoginComponent,
-    OrderComponent
+    OrderComponent,
+    RegisterComponent
   
     
   ],
@@ -35,7 +43,7 @@ import { OrderComponent } from './order/order.component';
     FormsModule
     
   ],
-  providers: [PizzaService, Pizza],
+  providers: [PizzaService, Pizza, User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
